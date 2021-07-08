@@ -7,7 +7,7 @@ function sumar()
 	//1.guardar los numeros en variables
 	//2.pasarlos a enteros
 	//3.sumarlos
-	//4.crear una variable para el resultado y mostrarlo
+	//4.mostrar el resultado
 	let num1;
 	let num2;
 	let resultado;
@@ -16,14 +16,11 @@ function sumar()
 	//txtIdNumeroDos
 	num1=document.getElementById("txtIdNumeroUno").value;
 	num2=document.getElementById("txtIdNumeroDos").value;
-	parseInt(num1,Number);
-	parseInt(num2,Number);
-	resultado=sumar(num1+num2);
-	//preguntar en clase cómo funciona el parseInt y cómo determino la variable
-	/*escribí esto "resultado=num1+num2;" y me costró los números juntos
-	como si fuera una cadena literal de texto, 
-	si cambio el + por una , entonces me muestra sólo
-	el primer número*/
+	//se puede hacer de las dos maneras
+	//num1=parseInt(num1);
+	//num2=parseInt(num2);
+	//alert(num1+num2);
+	resultado=parseInt(num1)+parseInt(num2);
 	alert(resultado);
 }
 
