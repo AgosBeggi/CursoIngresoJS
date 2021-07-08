@@ -13,9 +13,9 @@ function mostrar()
 	alert("ok");
 	esto se puede usar, pero no es 
 	js puro*/
-	let nombre;
+	let nombreIngresado;
 	nombre=document.getElementById("txtIdNombre").value;
-	alert(nombre);
+	alert(nombreIngresado);
 	document.getElementById("txtIdNombre").value="";
 	/*esto se hace para que la caja de texto quede vacía
 	despues de mostrar la alerta, pero no borra la variable
