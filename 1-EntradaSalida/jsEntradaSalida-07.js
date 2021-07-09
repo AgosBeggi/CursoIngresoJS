@@ -55,6 +55,6 @@ function dividir()
 	num2=parseInt(num2);
 	resultado=num1/num2;
 	resultado=parseFloat(resultado);
-	alert(resultado);	
+	alert(resultado);
 }
 
