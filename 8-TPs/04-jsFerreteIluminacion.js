@@ -28,7 +28,7 @@ function CalcularPrecio ()
     marca=document.getElementById("Marca").value;
     precioTotal=cantidad*PRECIO;
 
-    if(cantidad==3 && marca=="ArgentinaLuz")
+    /*if(cantidad==3 && marca=="ArgentinaLuz")
     {
         porcentaje=precioTotal*15/100;
         descuento=precioTotal-porcentaje;
@@ -81,36 +81,46 @@ function CalcularPrecio ()
         precioFinal=descuento+impuesto;
         alert("IIBB Usted pago " + precioFinal);
         }
-    }
+    }*/
 
-    /*switch(cantidad)
+    switch(cantidad)
         {
-            case cantidad==3:
+            case 1:
+            case 2:
+                document.getElementById("txtIdprecioDescuento").value=precioTotal;
+                break;
+            case 3:
                 if(marca=="ArgentinaLuz")
                 {
                     porcentaje=precioTotal*15/100;
                     descuento=precioTotal-porcentaje;
                     document.getElementById("txtIdprecioDescuento").value=descuento;
                 }
-                else if(marca=="FelipeLamparas");
+                else if(marca=="FelipeLamparas")
                 {
                     porcentaje=precioTotal*10/100;
                     descuento=precioTotal-porcentaje;
                     document.getElementById("txtIdprecioDescuento").value=descuento;
                 }
-                porcentaje=precioTotal*5/100;
-                descuento=precioTotal-porcentaje;
-                document.getElementById("txtIdprecioDescuento").value=descuento;
+                else
+                {
+                    porcentaje=precioTotal*5/100;
+                    descuento=precioTotal-porcentaje;
+                    document.getElementById("txtIdprecioDescuento").value=descuento;
+                }
+               
                 break;             
 
-            case cantidad==4:
+            case 4:
                 if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
                 {
                     porcentaje=precioTotal*25/100;
                     descuento=precioTotal-porcentaje;
-                    ocument.getElementById("txtIdprecioDescuento").value=descuento;
+                    document.getElementById("txtIdprecioDescuento").value=descuento;
                 }
-                else if(marca!="ArgentinaLuz" && marca!="FelipeLamparas")
+                else //if(marca!="ArgentinaLuz" && marca!="FelipeLamparas")
+                     //eso no va, porque es repetir el if, porque si no es
+                     //x marca ó x marca, van a ser el resto de las marcas
                 {
                     porcentaje=precioTotal*20/100;
                     descuento=precioTotal-porcentaje;
@@ -118,19 +128,22 @@ function CalcularPrecio ()
                 }
                 break;
 
-            case cantidad==5:
+            case 5:
                 if(marca=="ArgentinaLuz")
                 {
                     porcentaje=precioTotal*40/100;
                     descuento=precioTotal-porcentaje;
                     document.getElementById("txtIdprecioDescuento").value=descuento;
                 }
-                porcentaje=precioTotal*30/100;
-                descuento=precioTotal-porcentaje;
-                document.getElementById("txtIdprecioDescuento").value=descuento;
+                else
+                {
+                    porcentaje=precioTotal*30/100;
+                    descuento=precioTotal-porcentaje;
+                    document.getElementById("txtIdprecioDescuento").value=descuento;
+                }
                 break;
 
-            case cantidad>=6:
+            default:
                 porcentaje=precioTotal*50/100;
                 descuento=precioTotal-porcentaje;
                 document.getElementById("txtIdprecioDescuento").value=descuento;
@@ -138,11 +151,12 @@ function CalcularPrecio ()
                 {
                     impuesto=descuento*10/100;
                     precioFinal=descuento+impuesto;
+                    document.getElementById("txtIdprecioDescuento").value=descuento;
                     alert("IIBB Usted pagó " + precioFinal);
                 }
                 break;
 
-        }*/
+        }
     
 }
 
