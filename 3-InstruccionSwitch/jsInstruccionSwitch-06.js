@@ -1,16 +1,9 @@
 function mostrar()
 {
-	
-	/*Al ingresar una hora, informar:
-si está entre las 7 y las 11 : "Es de mañana.".
-si está entre las 12 y las 19 : "Es de tarde.".
-si está entre las 20 y las 24 o entre las 0 y las 6 : "Es de noche.".
-si NO está entre las 0 y las 24 : "la hora no existe.".*/
-	//txtIdHora
 	let hora;
 
-	hora=parseFloat(document.getElementById("txtIdHora").value);
-
+	hora=parseInt(document.getElementById("txtIdHora").value);
+	//parseInt porque dijeron horas en punto
 	switch(hora)
 	{
 		case 7:
@@ -30,18 +23,16 @@ si NO está entre las 0 y las 24 : "la hora no existe.".*/
 		case 19:
 			alert("Es de tarde");
 			break;
-		case 20:
-		case 21:
-		case 22:
-		case 23:
-		case 24:
-			alert("Es de noche");		
-			break;
 		default:
-			alert("Esa hora no existe");
-	
+			if(hora>24)
+			{
+				alert("la hora no existe.");
+			}
+			else
+			{
+				alert("Es de noche");
+			}
+			break;
 	}
-
-
-
+	//podría hacerse validación de datos para las horas que no existen
 }//FIN DE LA FUNCIÓN
