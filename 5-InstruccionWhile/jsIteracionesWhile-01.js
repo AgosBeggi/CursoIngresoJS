@@ -7,7 +7,7 @@ function mostrar()
 
 	while (i<10)
 	{
-		i=i+1;
+		i++;
 		alert("Número: " + i);	
 	}
 }//FIN DE LA FUNCIÓN

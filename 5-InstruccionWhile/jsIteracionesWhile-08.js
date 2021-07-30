@@ -1,19 +1,27 @@
-/*
-Al presionar el botón pedir  números  hasta que el usuario quiera,
-sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
-	var contador;
-	var respuesta;
-	var sumaPositivos;
-	var multiplicacionNegativos;
-	contador=0;
-	sumaPositivos=0;
-	multiplicacionNegativos=1;
-	respuesta='si';
+	let suma=0;
+	let multiplica=1;
+	let numeroIngresado;
+	let respuesta="S";
+	let flag=false;
 
+	while(respuesta != "N" && respuesta != "n"){
+		numeroIngresado = parseInt(prompt("ingrese un número"));
+		if(numeroIngresado >=0){
+			suma = suma + numeroIngresado;
+		}
+		else {
+			flag=true;
+			multiplica = multiplica * numeroIngresado;
+		}
+		respuesta = prompt("¿Desea sumar otro número?" + "\nS / N");
+	}
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
+	document.getElementById("txtIdSuma").value = suma;
+	if(flag==false){
+		multiplica=0;
+	}
+	document.getElementById("txtIdProducto").value = multiplica;
 
-}//FIN DE LA FUNCIÓN
+}

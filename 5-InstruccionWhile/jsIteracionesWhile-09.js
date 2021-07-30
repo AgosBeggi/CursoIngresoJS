@@ -1,21 +1,31 @@
-/*
-Al presionar el botón pedir  números  hasta que el usuario quiera,
-mostrar el número máximo y el número mínimo ingresado.*/
-function mostrar()
-{	// declarar variables
-	var banderaDelPrimero;
-	var numeroIngresado;
-	var numeroMaximo;
-	var numeroMinimo;
-	var respuesta;
-	//iniciar variables
-	banderaDelPrimero="es el primero";
-	respuesta='si';
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}
-	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+
+function mostrar() {
+	let numeroIngresado;
+	let maximo;
+	let minimo;
+	let respuesta="S";
+	let flag=0;
+
+	do{
+		numeroIngresado = parseInt(prompt("Ingrese un número"));
+		console.log(numeroIngresado);
+		if(flag==0){
+			minimo=numeroIngresado;
+			maximo=numeroIngresado;
+			flag=1;
+		}
+		else if(numeroIngresado >= maximo){
+			maximo = numeroIngresado;
+		}
+		else if(numeroIngresado <= minimo){
+			minimo = numeroIngresado;
+		}
+		respuesta = prompt("¿Desea sumar otro número?" + "\nS / N");
+	}while(respuesta != "N" && respuesta != "n");
+
+	document.getElementById("txtIdMaximo").value = maximo;
+	document.getElementById("txtIdMinimo").value = minimo;
+
+
+
 }//FIN DE LA FUNCIÓN
