@@ -1,4 +1,3 @@
-function mostrar()
-{
-  alert("dos");
+function mostrar() {
+ 
 }

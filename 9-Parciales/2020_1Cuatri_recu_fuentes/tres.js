@@ -1,4 +1,7 @@
-function mostrar()
-{
-	alert("tres");
-}
+function mostrar() {
+	
+} 
+
+
+
+

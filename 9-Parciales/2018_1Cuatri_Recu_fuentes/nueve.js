@@ -1,4 +1,3 @@
-function mostrar()
-{
-
+function mostrar() {
+    
 }

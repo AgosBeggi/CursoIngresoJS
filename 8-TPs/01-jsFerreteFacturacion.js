@@ -42,6 +42,7 @@ function PrecioFinal ()
     let precio2;
     let precio3;
     let suma;
+    
     let porcentaje;
     let total;
     precio1=parseFloat(document.getElementById("txtIdPrecioUno").value);
